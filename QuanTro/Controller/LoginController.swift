@@ -18,7 +18,6 @@ let ref = Database.database().reference()
 // vua dang nhap hoac dang ky thanh cong thi lay thong tin user ra
 var currenUser:User!
 var chuphongs:[ChuPhong] = DSChuPhong
-
 class LoginController: UIViewController{
     
     
@@ -96,6 +95,7 @@ class LoginController: UIViewController{
                 if(error == nil)
                 {
 //                                    print("....... dang nhap thanh cong ............")
+                    
                     let user = Auth.auth().currentUser
                     if let user = user {
                         let uid = user.uid
@@ -103,45 +103,137 @@ class LoginController: UIViewController{
                         let photoURL = user.photoURL
                         
                         currenUser = User(id: uid, email: email!, linkAvatar: String("\(photoURL!)"), quyen: 0)
-                        
                     }
                     else
                     {
                         print("khong co user !.............")
                     }
                     
-                    // ref.child de truy van table trong database
-                    let tablename = ref.child("DanhSachUser")
-                    // Listen for new comments in the Firebase database
-                    tablename.observe(.childAdded, with: { (snapshot) in
-                        // kiem tra xem postDict co du lieu hay ko
-                        let postDict = snapshot.value as? [String : AnyObject]
-                        if(postDict != nil)
-                        {
-                            // day la tra ve cac doi tuong tren database
-                            let email:String = (postDict?["email"])! as! String
-                            let quyen:String = (postDict?["quyen"])! as! String
-                            let linkAvatar:String = (postDict?["linkAvatar"])! as! String
-                            
-//                            let user:User = User(id: snapshot.key, email: email, fullname: fullName, linkAvatar: linkAvatar)
-                            let user:User = User(id: snapshot.key, email: email, linkAvatar: linkAvatar, quyen: Int(quyen)!)
-                            // kiem tra khong cho user minh hien thi ra
-                            if(user.id == currenUser.id)
+                    var u = "User1"
+                    var kt = 0
+                    var ql = "Quanlythongtincanhan"
+                    var t1 = 0
+                    let alertActivity:UIAlertController = UIAlertController(title: "", message: "", preferredStyle: .alert)
+                    let activity:UIActivityIndicatorView = UIActivityIndicatorView(style: .whiteLarge)
+                    activity.frame = CGRect(x: (self!.view.frame.size.width/3), y: 10, width: 0, height: 0)
+                    activity.color = UIColor.red
+                    alertActivity.view.addSubview(activity)
+                    activity.startAnimating()
+                    self!.present(alertActivity, animated: true, completion: nil)
+                    
+                    repeat{
+                        // ref.child de truy van table trong database , lay ra ID current USER hien tai
+                        let tablename = ref.child("User").child("\(u)")
+                        // Listen for new comments in the Firebase database
+                        tablename.observe(.childAdded, with: { (snapshot) in
+                            // kiem tra xem postDict co du lieu hay ko
+                            let postDict = snapshot.value as? [String : AnyObject]
+                            if(postDict != nil)
                             {
-                               currenUser = user
-                                if(currenUser.quyen == 1)
+                                if(currenUser.id == snapshot.key)
                                 {
-                                     print("...........chuyen man hinh khach hang...........")
-                                    self!.goto_Screen_Main_khach_hang()
-                                   
-                                }else
-                                {
-                                    // chuyen qua man hinh chu phong
-                                    print("...........chuyen man hinh chu phong.....\(currenUser.quyen)......")
+                                    //                    for (name, path) in postDict! {
+                                    //                        print("The key '\(name)' ...doi tuong la.... '\(path)'.")
+                                    //                        let p = path as! Dictionary<String,String>
+                                    //                        for (a, b) in p {
+                                    //                            print("chi tiet doi tuong la '\(a)' ....va..... '\(b)'.")
+                                    //                            if(a == "Quyen")
+                                    //                            {
+                                    //                                q = Int(b)!
+                                    //                                currenUser.quyen = q
+                                    //                            }
+                                    //                        }
+                                    //
+                                    //                    }
+                                    let User_current = (postDict!["Quanlythongtincanhan"]) as! NSMutableDictionary
+                                    
+                                    
+                                    let email:String = (User_current["Email"])! as! String
+                                    let quyen:String = (User_current["Quyen"])! as! String
+                                    let linkAvatar:String = (User_current["LinkAvatar"])! as! String
+                                    
+                                    let user:User = User(id: snapshot.key, email: email, linkAvatar: linkAvatar, quyen: Int(quyen)!)
+                                    currenUser = user
+                                    print("////////quyen la :\(currenUser.quyen)////////////")
+                                    kt =  1
+                                    if(Int(currenUser.quyen) == 1)
+                                    {
+                                        activity.stopAnimating()
+                                        alertActivity.dismiss(animated: true, completion: nil)
+                                        print("...........chuyen man hinh KH. ...")
+//                                        DispatchQueue.main.async {
+//                                        }
+                                        t1 = 1
+//                                        return
+                                    }else {
+                                        print("...........chuyen man hinh chu phong..1...")
+                                      
+                                    }
                                 }
                             }
+                        })
+                        if(kt == 0)
+                        {
+                            u = "User2"
                         }
-                    })
+                    }while kt == 1
+ 
+                    if(t1 == 1)
+                    {
+                        self?.goto_Screen_Main_khach_hang()
+                    }else{
+                        print("......loi ?????......\n")
+                    }
+
+                    
+                    
+                    
+//                    let user = Auth.auth().currentUser
+//                    if let user = user {
+//                        let uid = user.uid
+//                        let email = user.email
+//                        let photoURL = user.photoURL
+//                        
+//                        currenUser = User(id: uid, email: email!, linkAvatar: String("\(photoURL!)"), quyen: 0)
+//                        
+//                    }
+//                    else
+//                    {
+//                        print("khong co user !.............")
+//                    }
+//                    
+//                    // ref.child de truy van table trong database
+//                    let tablename = ref.child("User")
+//                    // Listen for new comments in the Firebase database
+//                    tablename.observe(.childAdded, with: { (snapshot) in
+//                        // kiem tra xem postDict co du lieu hay ko
+//                        let postDict = snapshot.value as? [String : AnyObject]
+//                        if(postDict != nil)
+//                        {
+//                            // day la tra ve cac doi tuong tren database
+//                            let email:String = (postDict?["email"])! as! String
+//                            let quyen:String = (postDict?["quyen"])! as! String
+//                            let linkAvatar:String = (postDict?["linkAvatar"])! as! String
+//                            
+////                            let user:User = User(id: snapshot.key, email: email, fullname: fullName, linkAvatar: linkAvatar)
+//                            let user:User = User(id: snapshot.key, email: email, linkAvatar: linkAvatar, quyen: Int(quyen)!)
+//                            // kiem tra khong cho user minh hien thi ra
+//                            if(user.id == currenUser.id)
+//                            {
+//                               currenUser = user
+//                                if(currenUser.quyen == 1)
+//                                {
+//                                     print("...........chuyen man hinh khach hang...........")
+//                                    self!.goto_Screen_Main_khach_hang()
+//                                   
+//                                }else
+//                                {
+//                                    // chuyen qua man hinh chu phong
+//                                    print("...........chuyen man hinh chu phong.....\(currenUser.quyen)......")
+//                                }
+//                            }
+//                        }
+//                    })
                 }
                 else
                 {
@@ -211,9 +303,9 @@ class LoginController: UIViewController{
     }
 
     func goto_Screen_Main_khach_hang() {
-        let scr = self.storyboard?.instantiateViewController(withIdentifier: "MH_chucnang_khachhang")
+        let scr = self.storyboard?.instantiateViewController(withIdentifier: "MH_chucnang_khachhang") as! Screen_Main_Customer_ViewController
 //        present(scr!, animated: true, completion: nil)
-        navigationController?.pushViewController(scr!, animated: true)
+        navigationController?.pushViewController(scr, animated: true)
     }
     
     

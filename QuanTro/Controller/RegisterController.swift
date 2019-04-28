@@ -13,7 +13,7 @@ import TextFieldEffects
 import DLRadioButton
 import FirebaseAuth
 import FirebaseStorage
-
+var quyenUser:Int!
 
 
 class RegisterController: UIViewController ,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -23,7 +23,7 @@ class RegisterController: UIViewController ,UIImagePickerControllerDelegate, UIN
     @IBOutlet weak var confirmField: AkiraTextField!
     @IBOutlet weak var register_custom: UIButton!
     var RadioButtonValue:String!
-    var quyenUser:Int!
+  
     var imgdata:Data!
     @IBOutlet weak var avatar: UIImageView!
     
@@ -201,47 +201,71 @@ class RegisterController: UIViewController ,UIImagePickerControllerDelegate, UIN
                                         if(error == nil)
                                         {
                                             print("ok dang nhap thanh cong !")
-                                            // tao tai khoan thanh cong thi se luu thong tin nguoi dung vao database
-                                            let user = Auth.auth().currentUser
-                                            if let user = user {
-                                                let uid = user.uid
-                                                let email = user.email
-                                                let photoURL = user.photoURL
-                                                let quyen = self.quyenUser
-                                                
-                                                //                        currenUser = User(id: uid, email: email!, fullname: name!, linkAvatar: String("\(photoURL!)") )
-                                                currenUser = User(id: uid, email: email!, linkAvatar: String("\(photoURL!)") , quyen: quyen!)
-                                                //            print("...........<<<<\(currenUser.linkAvatar)>>>>..............")
-                                                let tableUser = ref.child("DanhSachUser")
-                                                // lay id user dang dang nhap hien tai
-                                                let userid = tableUser.child(currenUser.id)
-                                                // khoi tao 1 user de up len fire base
-                                                let user:Dictionary<String,String> = ["email":currenUser.email,
-                                                                                      "quyen":String (currenUser!.quyen),
-                                                                                      "linkAvatar":currenUser.linkAvatar
-                                                ]
-                                                userid.setValue(user)
-                                                let url:URL = URL(string: currenUser.linkAvatar)!
-                                                do{
-                                                    let data:Data = try Data(contentsOf: url)
-                                                    currenUser.Avatar = UIImage(data: data)
-                                                    // dem du lieu len fire base database
-//                                                    print("...xxxxx..<<<<\(currenUser.email)>>>>......\(currenUser.quyen)...........")
-                                                    let currenUser_quyen:Int = currenUser.quyen
-                                                    if(currenUser_quyen == 1)
-                                                    {
-                                                        self.goto_Screen_Main_khach_hang()
-                                                    }
-                                                }
-                                                catch{
-                                                    print("loi load hinh")
-                                                }
-                                                
-                                            }
-                                            else
+                                            
+                                            let f = chucnang()
+                                            let q = f.kiemraUser_addUser()
+                                            if(q == 1)
                                             {
-                                                print("khong co user !.............")
-                                            }
+                                                self.goto_Screen_Main_khach_hang()
+                                            }else if(q == 2)
+                                                    {
+                                                       print("di den man hinh chu phong")
+                                                    }
+//                                            // tao tai khoan thanh cong thi se luu thong tin nguoi dung vao database
+//                                            let user = Auth.auth().currentUser
+//                                            if let user = user {
+//                                                let uid = user.uid
+//                                                let email = user.email
+//                                                let photoURL = user.photoURL
+//                                                let quyen = quyenUser
+//
+//                                                //                        currenUser = User(id: uid, email: email!, fullname: name!, linkAvatar: String("\(photoURL!)") )
+//                                                currenUser = User(id: uid, email: email!, linkAvatar: String("\(photoURL!)") , quyen: quyen!)
+//                                                //            print("...........<<<<\(currenUser.linkAvatar)>>>>..............")
+//                                                var u = ""
+//                                                var ql = "Quanlydaytro"
+//                                                var DSP = "Danhsachphong"
+//                                                var CTP = "Chitietphong"
+//                                                if(currenUser.quyen == 1)
+//                                                {
+//                                                     u = "User1"
+//                                                }else
+//                                                {
+//                                                    u = "User2"
+//                                                }
+//                                                let tableUser = ref.child("User").child("\(u)").child(currenUser.id).child("\(ql)").child("\(DSP)").childByAutoId().child("ctp")
+////                                                // lay id user dang dang nhap hien tai
+////                                                let userid = tableUser.child(currenUser.id)
+//                                                // khoi tao 1 user de up len fire base
+//                                                let chitietphong:Dictionary<String,String> = ["Dientich":currenUser.email,
+//                                                                                              "Gia":String (currenUser!.quyen),
+//                                                                                              "Motacuthe":currenUser.linkAvatar,
+//                                                                                              "hinhphong": ,
+//                                                                                              "Diachi": ,
+//                                                                                              "Trangthai":
+//                                                ]
+//                                                userid.setValue(user)
+//                                                let url:URL = URL(string: currenUser.linkAvatar)!
+//                                                do{
+//                                                    let data:Data = try Data(contentsOf: url)
+//                                                    currenUser.Avatar = UIImage(data: data)
+//                                                    // dem du lieu len fire base database
+////                                                    print("...xxxxx..<<<<\(currenUser.email)>>>>......\(currenUser.quyen)...........")
+//                                                    let currenUser_quyen:Int = currenUser.quyen
+//                                                    if(currenUser_quyen == 1)
+//                                                    {
+//                                                        self.goto_Screen_Main_khach_hang()
+//                                                    }
+//                                                }
+//                                                catch{
+//                                                    print("loi load hinh")
+//                                                }
+//
+//                                        }
+//                                        else
+//                                        {
+//                                            print("khong co user !.............")
+//                                        }
 
                                             }
                                         }

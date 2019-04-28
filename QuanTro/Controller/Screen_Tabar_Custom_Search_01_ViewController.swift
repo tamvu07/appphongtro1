@@ -67,6 +67,19 @@ extension Screen_Tabar_Custom_Search_01_ViewController : UITableViewDataSource, 
             a.updateUI(width: dataForCell)
         }else{
             let b = cell as! CELL2_Table_Tabar_Custom_Search_01_TableViewCell
+            b.lb_diachi.text = chuphongs[indexPath.row].diachi
+            b.lb_tien.text = chuphongs[indexPath.row].gia
+            let avatar = chuphongs[indexPath.row].linkAvatar
+            let url:URL = URL(string: avatar!)!
+            do
+            {
+                let dulieu:Data = try Data(contentsOf: url)
+                b.image_1.image = UIImage(data: dulieu)
+            }
+            catch
+            {
+                print("khong lay dc du lieu !")
+            }
         }
         return cell
     }
