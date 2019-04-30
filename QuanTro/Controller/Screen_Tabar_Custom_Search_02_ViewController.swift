@@ -2,7 +2,7 @@
 //  Screen_Tabar_Custom_Search_02_ViewController.swift
 //  QuanTro
 //
-//  Created by vuminhtam on 4/23/19.
+//  Created by vuminhtam on 4/30/19.
 //  Copyright © 2019 Le Nguyen Quoc Cuong. All rights reserved.
 //
 
@@ -10,7 +10,7 @@ import UIKit
 var TP:String!
 
 class Screen_Tabar_Custom_Search_02_ViewController: UIViewController {
-
+    
     @IBOutlet weak var SearchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     let countryNameARR2 = ["a","b","c","d","q","rw","e","t","y","u","i","o","p","a","s","d","f","g","h","j","k","l","z","x","c","v","b","n","b","b"]
@@ -23,7 +23,7 @@ class Screen_Tabar_Custom_Search_02_ViewController: UIViewController {
         "Bạc Liêu",
         "Bắc Ninh",
         "Bến Tre",
-       "Bình Định",
+        "Bình Định",
         "Bình Dương",
         "Bình Phước",
         "Bình Thuận",
@@ -56,7 +56,7 @@ class Screen_Tabar_Custom_Search_02_ViewController: UIViewController {
         "Trà Vinh",
         "Tuyên Quang",
         "Vĩnh Long"
-        ]
+    ]
     
     var searchCountry = [String]()
     var searching = false
@@ -67,8 +67,8 @@ class Screen_Tabar_Custom_Search_02_ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         super.viewDidLoad()
-
-
+        
+        
     }
     
     func goto_MH_timkiem_02_01()
@@ -76,23 +76,23 @@ class Screen_Tabar_Custom_Search_02_ViewController: UIViewController {
         let scr = storyboard?.instantiateViewController(withIdentifier: "MH_timkiem_02_01")
         navigationController?.pushViewController(scr!, animated: true)
     }
-
+    
 }
 
 extension Screen_Tabar_Custom_Search_02_ViewController: UITableViewDataSource,UITableViewDelegate
 {
-
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if searching {
             return searchCountry.count
         }else{
             return countryNameARR.count
         }
-
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -108,9 +108,9 @@ extension Screen_Tabar_Custom_Search_02_ViewController: UITableViewDataSource,UI
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         var text = ""
         if searching {
-             text = searchCountry[indexPath.row]
+            text = searchCountry[indexPath.row]
         }else{
-             text = countryNameARR[indexPath.row]
+            text = countryNameARR[indexPath.row]
         }
         TP = text
         goto_MH_timkiem_02_01()

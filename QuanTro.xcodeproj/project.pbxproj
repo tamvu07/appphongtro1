@@ -20,6 +20,12 @@
 		18EBBE3C226A258B005969EB /* DS_phongcosan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EBBE3B226A258B005969EB /* DS_phongcosan.swift */; };
 		18EBBE3E226A269A005969EB /* chuphong.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EBBE3D226A269A005969EB /* chuphong.swift */; };
 		18F6B86C2269697B00523FBA /* Screen_Tabar_Customer_Seach_1_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F6B86B2269697B00523FBA /* Screen_Tabar_Customer_Seach_1_ViewController.swift */; };
+		18FA183A227835D2009D02B9 /* function.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA1839227835D2009D02B9 /* function.swift */; };
+		18FA183C227836AE009D02B9 /* Screen_Tabar_Custom_Search_02_01_DSOf01_Detail_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA183B227836AE009D02B9 /* Screen_Tabar_Custom_Search_02_01_DSOf01_Detail_ViewController.swift */; };
+		18FA183E22783702009D02B9 /* Screen_Tabar_Custom_Search_02_01_DSOf01_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA183D22783702009D02B9 /* Screen_Tabar_Custom_Search_02_01_DSOf01_ViewController.swift */; };
+		18FA184022783753009D02B9 /* Screen_Tabar_Custom_Search_02_01_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA183F22783753009D02B9 /* Screen_Tabar_Custom_Search_02_01_ViewController.swift */; };
+		18FA18422278378F009D02B9 /* Screen_Tabar_Custom_Search_02_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA18412278378F009D02B9 /* Screen_Tabar_Custom_Search_02_ViewController.swift */; };
+		18FA184422785B34009D02B9 /* CELL_Tabar_Custom_Search_02_01_DSOf01_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA184322785B34009D02B9 /* CELL_Tabar_Custom_Search_02_01_DSOf01_TableViewCell.swift */; };
 		4C7182BA04185023F2DBCF73 /* Pods_QuanTro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16553E82AB14EF080A4C9810 /* Pods_QuanTro.framework */; };
 		EA00CA5721D9AC76000124F8 /* RoomerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA00CA5621D9AC76000124F8 /* RoomerCell.xib */; };
 		EA00CA5921D9AE17000124F8 /* RoomerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA00CA5821D9AE17000124F8 /* RoomerCell.swift */; };
@@ -81,6 +87,12 @@
 		18EBBE3B226A258B005969EB /* DS_phongcosan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DS_phongcosan.swift; sourceTree = "<group>"; };
 		18EBBE3D226A269A005969EB /* chuphong.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chuphong.swift; sourceTree = "<group>"; };
 		18F6B86B2269697B00523FBA /* Screen_Tabar_Customer_Seach_1_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen_Tabar_Customer_Seach_1_ViewController.swift; sourceTree = "<group>"; };
+		18FA1839227835D2009D02B9 /* function.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = function.swift; sourceTree = "<group>"; };
+		18FA183B227836AE009D02B9 /* Screen_Tabar_Custom_Search_02_01_DSOf01_Detail_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen_Tabar_Custom_Search_02_01_DSOf01_Detail_ViewController.swift; sourceTree = "<group>"; };
+		18FA183D22783702009D02B9 /* Screen_Tabar_Custom_Search_02_01_DSOf01_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen_Tabar_Custom_Search_02_01_DSOf01_ViewController.swift; sourceTree = "<group>"; };
+		18FA183F22783753009D02B9 /* Screen_Tabar_Custom_Search_02_01_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen_Tabar_Custom_Search_02_01_ViewController.swift; sourceTree = "<group>"; };
+		18FA18412278378F009D02B9 /* Screen_Tabar_Custom_Search_02_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen_Tabar_Custom_Search_02_ViewController.swift; sourceTree = "<group>"; };
+		18FA184322785B34009D02B9 /* CELL_Tabar_Custom_Search_02_01_DSOf01_TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CELL_Tabar_Custom_Search_02_01_DSOf01_TableViewCell.swift; sourceTree = "<group>"; };
 		84EDA828664F4C54EE97C79B /* Pods-QuanTro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuanTro.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuanTro/Pods-QuanTro.release.xcconfig"; sourceTree = "<group>"; };
 		DC97624E77661D836E7EBB97 /* Pods-QuanTro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuanTro.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuanTro/Pods-QuanTro.debug.xcconfig"; sourceTree = "<group>"; };
 		EA00CA5621D9AC76000124F8 /* RoomerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoomerCell.xib; sourceTree = "<group>"; };
@@ -157,6 +169,7 @@
 				1882776D2268CA19002E1813 /* BaseView.swift */,
 				18EBBE3B226A258B005969EB /* DS_phongcosan.swift */,
 				18EBBE3D226A269A005969EB /* chuphong.swift */,
+				18FA1839227835D2009D02B9 /* function.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -175,6 +188,7 @@
 				1861968A226DF001004E8A73 /* collection */,
 				18619684226DC34D004E8A73 /* CELL1_Table_Tabar_Custom_Search_01_TableViewCell.swift */,
 				18619686226DD22F004E8A73 /* CELL2_Table_Tabar_Custom_Search_01_TableViewCell.swift */,
+				18FA184322785B34009D02B9 /* CELL_Tabar_Custom_Search_02_01_DSOf01_TableViewCell.swift */,
 			);
 			path = tabar;
 			sourceTree = "<group>";
@@ -310,6 +324,10 @@
 				1882776B2268C814002E1813 /* CELL_Main_Customer_TableViewCell.swift */,
 				18F6B86B2269697B00523FBA /* Screen_Tabar_Customer_Seach_1_ViewController.swift */,
 				1861967F226DBF23004E8A73 /* Screen_Tabar_Custom_Search_01_ViewController.swift */,
+				18FA183B227836AE009D02B9 /* Screen_Tabar_Custom_Search_02_01_DSOf01_Detail_ViewController.swift */,
+				18FA183D22783702009D02B9 /* Screen_Tabar_Custom_Search_02_01_DSOf01_ViewController.swift */,
+				18FA183F22783753009D02B9 /* Screen_Tabar_Custom_Search_02_01_ViewController.swift */,
+				18FA18412278378F009D02B9 /* Screen_Tabar_Custom_Search_02_ViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -463,12 +481,14 @@
 				18619687226DD22F004E8A73 /* CELL2_Table_Tabar_Custom_Search_01_TableViewCell.swift in Sources */,
 				EAA444EE21B2338B008AE807 /* CreateRoomController.swift in Sources */,
 				EA00CA5F21DB6C0E000124F8 /* ContractController.swift in Sources */,
+				18FA183A227835D2009D02B9 /* function.swift in Sources */,
 				EAE0C63B21D50E420085E5FD /* SearchController.swift in Sources */,
 				EAD5632D21AFF9A100ACC2DE /* MotelController.swift in Sources */,
 				EA00CA5921D9AE17000124F8 /* RoomerCell.swift in Sources */,
 				EAA8927A21B15928005761BB /* RoomCell.swift in Sources */,
 				EAA4450A21B6761E008AE807 /* ServicePricesController.swift in Sources */,
 				EAE6DF3E21A92682000749CD /* RegisterController.swift in Sources */,
+				18FA183E22783702009D02B9 /* Screen_Tabar_Custom_Search_02_01_DSOf01_ViewController.swift in Sources */,
 				EA00CA6521DBAD95000124F8 /* CreateVehicleController.swift in Sources */,
 				EAE6DF2921A8F614000749CD /* LoginController.swift in Sources */,
 				EAE0C63721D4EE250085E5FD /* HistoryIndexCell.swift in Sources */,
@@ -500,10 +520,14 @@
 				1882776C2268C814002E1813 /* CELL_Main_Customer_TableViewCell.swift in Sources */,
 				EAA8927821B1590A005761BB /* ListRoomController.swift in Sources */,
 				EAE0C63421D46D230085E5FD /* CollectingFeeController.swift in Sources */,
+				18FA183C227836AE009D02B9 /* Screen_Tabar_Custom_Search_02_01_DSOf01_Detail_ViewController.swift in Sources */,
 				EA1ABD4321C6410400199442 /* PopupController.swift in Sources */,
+				18FA184022783753009D02B9 /* Screen_Tabar_Custom_Search_02_01_ViewController.swift in Sources */,
+				18FA184422785B34009D02B9 /* CELL_Tabar_Custom_Search_02_01_DSOf01_TableViewCell.swift in Sources */,
 				EAE6DF2721A8F614000749CD /* AppDelegate.swift in Sources */,
 				EAD5632921AC4CC400ACC2DE /* ListOfMotel.swift in Sources */,
 				EAA4450421B4ECBD008AE807 /* ListRoomAvailableController.swift in Sources */,
+				18FA18422278378F009D02B9 /* Screen_Tabar_Custom_Search_02_ViewController.swift in Sources */,
 				EAE6DF4821AAD4A7000749CD /* CreateMotelController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

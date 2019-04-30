@@ -16,16 +16,16 @@ struct User {
     var Avatar:UIImage!
     var quyen:Int!
     
-    init()
-    {
-        id = ""
-        email = ""
-        linkAvatar = ""
-        Avatar = UIImage(named: "person")
-        quyen = 0
-    }
+//    init()
+//    {
+//        id = ""
+//        email = ""
+//        linkAvatar = ""
+//        Avatar = UIImage(named: "person")
+//        quyen = 0
+//    }
     
-    init(id:String,email:String,linkAvatar:String,quyen:Int) {
+    init(id:String = "",email:String = "" ,linkAvatar:String = "" ,quyen:Int = 0) {
         self.id = id
         self.email = email
         self.linkAvatar = linkAvatar

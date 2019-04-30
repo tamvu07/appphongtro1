@@ -34,7 +34,7 @@ class RegisterController: UIViewController ,UIImagePickerControllerDelegate, UIN
         super.viewDidLoad()
         setupView()
         avatar.isUserInteractionEnabled = true
-        var TapGesture =  UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
+        let TapGesture =  UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
         self.avatar.addGestureRecognizer(TapGesture)
         // khi moi vao co anh tu may luon
         imgdata = UIImage(named: "person")!.pngData()

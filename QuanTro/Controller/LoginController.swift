@@ -95,95 +95,72 @@ class LoginController: UIViewController{
                 if(error == nil)
                 {
 //                                    print("....... dang nhap thanh cong ............")
-                    
                     let user = Auth.auth().currentUser
-                    if let user = user {
-                        let uid = user.uid
-                        let email = user.email
-                        let photoURL = user.photoURL
-                        
-                        currenUser = User(id: uid, email: email!, linkAvatar: String("\(photoURL!)"), quyen: 0)
-                    }
-                    else
-                    {
-                        print("khong co user !.............")
-                    }
+                    let avatar: String = user?.photoURL! as? String ?? ""
+                    currenUser = User.init(id: user!.uid, email: (user!.email!), linkAvatar: avatar, quyen: 0)
                     
                     var u = "User1"
-                    var kt = 0
-                    var ql = "Quanlythongtincanhan"
-                    var t1 = 0
-                    let alertActivity:UIAlertController = UIAlertController(title: "", message: "", preferredStyle: .alert)
-                    let activity:UIActivityIndicatorView = UIActivityIndicatorView(style: .whiteLarge)
-                    activity.frame = CGRect(x: (self!.view.frame.size.width/3), y: 10, width: 0, height: 0)
-                    activity.color = UIColor.red
-                    alertActivity.view.addSubview(activity)
-                    activity.startAnimating()
-                    self!.present(alertActivity, animated: true, completion: nil)
                     
-                    repeat{
-                        // ref.child de truy van table trong database , lay ra ID current USER hien tai
-                        let tablename = ref.child("User").child("\(u)")
-                        // Listen for new comments in the Firebase database
-                        tablename.observe(.childAdded, with: { (snapshot) in
-                            // kiem tra xem postDict co du lieu hay ko
-                            let postDict = snapshot.value as? [String : AnyObject]
-                            if(postDict != nil)
+                    // ref.child de truy van table trong database , lay ra ID current USER hien tai
+                    var tablename = ref.child("User").child("\(u)")
+                    // Listen for new comments in the Firebase database
+                    tablename.observe(.childAdded, with: { (snapshot) in
+                        // nếu lấy được dữ liệu postDict từ sever về và id của user có trong postDict
+                        if let postDict = snapshot.value as? [String : AnyObject], currenUser.id == snapshot.key
+                        {
+                            let User_current = (postDict["Quanlythongtincanhan"]) as! NSMutableDictionary
+                            let email:String = (User_current["Email"])! as? String ?? "taolao@gmail.com"
+                            let quyen:String = (User_current["Quyen"])! as? String ?? "taolao"
+                            let linkAvatar:String = (User_current["LinkAvatar"])! as? String ?? "taolao"
+                            
+                            let user:User = User(id: snapshot.key, email: email, linkAvatar: linkAvatar, quyen: Int(quyen)!)
+                            currenUser = user
+                            
+                            if(Int(currenUser.quyen) == 1)
                             {
-                                if(currenUser.id == snapshot.key)
+                                print("---------------- Chuyen man hinh cho user voi quyen la 1 ---------------")
+                                self?.goto_Screen_Main_khach_hang()
+                            }
+                            else {
+                                
+                            }
+                        }
+                        else {
+                            print("KHONG CO POSTDICT HOAC ID USER KHONG CO TRONG TABLE USER1")
+                            
+                            u = "User2"
+                            
+                            // ref.child de truy van table trong database , lay ra ID current USER hien tai
+                            tablename = ref.child("User").child("\(u)")
+                            // Listen for new comments in the Firebase database
+                            tablename.observe(.childAdded, with: { (snapshot) in
+                                // nếu lấy được dữ liệu postDict từ sever về và id của user có trong postDict
+                                if let postDict = snapshot.value as? [String : AnyObject], currenUser.id == snapshot.key
                                 {
-                                    //                    for (name, path) in postDict! {
-                                    //                        print("The key '\(name)' ...doi tuong la.... '\(path)'.")
-                                    //                        let p = path as! Dictionary<String,String>
-                                    //                        for (a, b) in p {
-                                    //                            print("chi tiet doi tuong la '\(a)' ....va..... '\(b)'.")
-                                    //                            if(a == "Quyen")
-                                    //                            {
-                                    //                                q = Int(b)!
-                                    //                                currenUser.quyen = q
-                                    //                            }
-                                    //                        }
-                                    //
-                                    //                    }
-                                    let User_current = (postDict!["Quanlythongtincanhan"]) as! NSMutableDictionary
-                                    
-                                    
-                                    let email:String = (User_current["Email"])! as! String
-                                    let quyen:String = (User_current["Quyen"])! as! String
-                                    let linkAvatar:String = (User_current["LinkAvatar"])! as! String
+                                    let User_current = (postDict["Quanlythongtincanhan"]) as! NSMutableDictionary
+                                    let email:String = (User_current["Email"])! as? String ?? "taolao@gmail.com"
+                                    let quyen:String = (User_current["Quyen"])! as? String ?? "taolao"
+                                    let linkAvatar:String = (User_current["LinkAvatar"])! as? String ?? "taolao"
                                     
                                     let user:User = User(id: snapshot.key, email: email, linkAvatar: linkAvatar, quyen: Int(quyen)!)
                                     currenUser = user
-                                    print("////////quyen la :\(currenUser.quyen)////////////")
-                                    kt =  1
-                                    if(Int(currenUser.quyen) == 1)
+                                    
+                                    if(Int(currenUser.quyen) == 2)
                                     {
-                                        activity.stopAnimating()
-                                        alertActivity.dismiss(animated: true, completion: nil)
-                                        print("...........chuyen man hinh KH. ...")
-//                                        DispatchQueue.main.async {
-//                                        }
-                                        t1 = 1
-//                                        return
-                                    }else {
-                                        print("...........chuyen man hinh chu phong..1...")
-                                      
+                                        print("---------------- Chuyen man hinh cho user voi quyen la 2 ---------------")
+                                        self?.set_data_QLphong()
+                                    }
+                                    else {
+                                        
                                     }
                                 }
-                            }
-                        })
-                        if(kt == 0)
-                        {
-                            u = "User2"
+                                else {
+                                    print("KHONG CO POSTDICT HOAC ID USER KHONG CO TRONG TABLE USER2")
+                                }
+                            })
                         }
-                    }while kt == 1
- 
-                    if(t1 == 1)
-                    {
-                        self?.goto_Screen_Main_khach_hang()
-                    }else{
-                        print("......loi ?????......\n")
-                    }
+                    })
+                    
 
                     
                     
@@ -308,6 +285,21 @@ class LoginController: UIViewController{
         navigationController?.pushViewController(scr, animated: true)
     }
     
+    
+    func set_data_QLphong(){
+        let tableUser = ref.child("User").child("User2").child(currenUser.id).child("Quanlyphong").childByAutoId().child("Chitietphong")
+        
+        let tt:Dictionary<String,String> = [
+            "Diachi": "2459/7 BT",
+            "Dientich": "90/8",
+            "Gia":"800",
+            "Hinhphong":"...",
+            "Motachitietphong":"...",
+            "Trangthai":"1"
+        ]
+        
+        tableUser.setValue(tt)
+    }
     
 //    public func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
 //        // ...

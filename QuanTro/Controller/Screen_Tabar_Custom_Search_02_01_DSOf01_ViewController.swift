@@ -2,22 +2,23 @@
 //  Screen_Tabar_Custom_Search_02_01_DSOf01_ViewController.swift
 //  QuanTro
 //
-//  Created by vuminhtam on 4/24/19.
+//  Created by vuminhtam on 4/30/19.
 //  Copyright © 2019 Le Nguyen Quoc Cuong. All rights reserved.
 //
 
 import UIKit
 
 class Screen_Tabar_Custom_Search_02_01_DSOf01_ViewController: UIViewController {
-
+    
     
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
- 
+        
         tableView.dataSource = self
         tableView.delegate   = self
+        self.load_table()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -45,13 +46,13 @@ extension Screen_Tabar_Custom_Search_02_01_DSOf01_ViewController: UITableViewDat
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-
+        
         return 10
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CELL", for: indexPath)
-
+        
         let image = cell.viewWithTag(100) as! UIImageView
         let lb_diachi = cell.viewWithTag(101) as! UILabel
         let lb_gia    = cell.viewWithTag(102)  as! UILabel
@@ -63,12 +64,25 @@ extension Screen_Tabar_Custom_Search_02_01_DSOf01_ViewController: UITableViewDat
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
-            self.goto_MH_Search_02_01_DSOf01_detail()
+        
+        self.goto_MH_Search_02_01_DSOf01_detail()
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
+    }
+    
+    func load_table() {
+        
+        var tablename = ref.child("User").child("User2")
+        tablename.observe(.childAdded, with: { (snapshot) in
+            // kiem tra xem postDict co du lieu hay ko
+            let postDict = snapshot.value as? [String : AnyObject]
+            if(postDict != nil)
+            {
+//             self.listFriend.append(user)
+            }
+        })
     }
     
     
