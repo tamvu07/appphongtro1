@@ -26,6 +26,7 @@
 		18FA184022783753009D02B9 /* Screen_Tabar_Custom_Search_02_01_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA183F22783753009D02B9 /* Screen_Tabar_Custom_Search_02_01_ViewController.swift */; };
 		18FA18422278378F009D02B9 /* Screen_Tabar_Custom_Search_02_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA18412278378F009D02B9 /* Screen_Tabar_Custom_Search_02_ViewController.swift */; };
 		18FA184422785B34009D02B9 /* CELL_Tabar_Custom_Search_02_01_DSOf01_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA184322785B34009D02B9 /* CELL_Tabar_Custom_Search_02_01_DSOf01_TableViewCell.swift */; };
+		18FA184622786436009D02B9 /* Screen_Tabar_Custom_Search_02_01_DSOf01_Detail__Chat_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA184522786435009D02B9 /* Screen_Tabar_Custom_Search_02_01_DSOf01_Detail__Chat_ViewController.swift */; };
 		4C7182BA04185023F2DBCF73 /* Pods_QuanTro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16553E82AB14EF080A4C9810 /* Pods_QuanTro.framework */; };
 		EA00CA5721D9AC76000124F8 /* RoomerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA00CA5621D9AC76000124F8 /* RoomerCell.xib */; };
 		EA00CA5921D9AE17000124F8 /* RoomerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA00CA5821D9AE17000124F8 /* RoomerCell.swift */; };
@@ -93,6 +94,7 @@
 		18FA183F22783753009D02B9 /* Screen_Tabar_Custom_Search_02_01_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen_Tabar_Custom_Search_02_01_ViewController.swift; sourceTree = "<group>"; };
 		18FA18412278378F009D02B9 /* Screen_Tabar_Custom_Search_02_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen_Tabar_Custom_Search_02_ViewController.swift; sourceTree = "<group>"; };
 		18FA184322785B34009D02B9 /* CELL_Tabar_Custom_Search_02_01_DSOf01_TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CELL_Tabar_Custom_Search_02_01_DSOf01_TableViewCell.swift; sourceTree = "<group>"; };
+		18FA184522786435009D02B9 /* Screen_Tabar_Custom_Search_02_01_DSOf01_Detail__Chat_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen_Tabar_Custom_Search_02_01_DSOf01_Detail__Chat_ViewController.swift; sourceTree = "<group>"; };
 		84EDA828664F4C54EE97C79B /* Pods-QuanTro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuanTro.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuanTro/Pods-QuanTro.release.xcconfig"; sourceTree = "<group>"; };
 		DC97624E77661D836E7EBB97 /* Pods-QuanTro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuanTro.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuanTro/Pods-QuanTro.debug.xcconfig"; sourceTree = "<group>"; };
 		EA00CA5621D9AC76000124F8 /* RoomerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoomerCell.xib; sourceTree = "<group>"; };
@@ -328,6 +330,7 @@
 				18FA183D22783702009D02B9 /* Screen_Tabar_Custom_Search_02_01_DSOf01_ViewController.swift */,
 				18FA183F22783753009D02B9 /* Screen_Tabar_Custom_Search_02_01_ViewController.swift */,
 				18FA18412278378F009D02B9 /* Screen_Tabar_Custom_Search_02_ViewController.swift */,
+				18FA184522786435009D02B9 /* Screen_Tabar_Custom_Search_02_01_DSOf01_Detail__Chat_ViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -481,6 +484,7 @@
 				18619687226DD22F004E8A73 /* CELL2_Table_Tabar_Custom_Search_01_TableViewCell.swift in Sources */,
 				EAA444EE21B2338B008AE807 /* CreateRoomController.swift in Sources */,
 				EA00CA5F21DB6C0E000124F8 /* ContractController.swift in Sources */,
+				18FA184622786436009D02B9 /* Screen_Tabar_Custom_Search_02_01_DSOf01_Detail__Chat_ViewController.swift in Sources */,
 				18FA183A227835D2009D02B9 /* function.swift in Sources */,
 				EAE0C63B21D50E420085E5FD /* SearchController.swift in Sources */,
 				EAD5632D21AFF9A100ACC2DE /* MotelController.swift in Sources */,
