@@ -28,6 +28,19 @@ class Screen_Tabar_Custom_Search_02_01_DSOf01_ViewController: UIViewController {
         tablename.observe(.childAdded, with: { (snapshot) in
             // kiem tra xem postDict co du lieu hay ko
             let postDict = snapshot.value as? [String : AnyObject]
+            
+            /*
+             let postDict = snapshot.value ?? nil
+             let data: Class?
+             do {
+                data = try FirebaseDecoder().decode(Class.self, from: postDict)
+             }
+             catch let error {
+             print(error)
+             }
+             data.quanlythongtincanhan.linkAvatar
+             */
+            
             if(postDict != nil)
             {
                 let id_User2 = snapshot.key
@@ -76,7 +89,6 @@ extension Screen_Tabar_Custom_Search_02_01_DSOf01_ViewController: UITableViewDat
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CELL", for: indexPath)
-        print(".......mang user 2 la :.....\(listUser2.count)................")
         let image = cell.viewWithTag(100) as! UIImageView
         let lb_diachi = cell.viewWithTag(101) as! UILabel
         let lb_gia    = cell.viewWithTag(102)  as! UILabel

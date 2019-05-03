@@ -178,6 +178,7 @@
                         <color key="backgroundColor" red="0.46628311369999997" green="1" blue="0.99046147880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="G1L-bA-FoC"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="CHUC NANG" image="manage" id="wor-Va-9Tz"/>
                     <navigationItem key="navigationItem" title="Trang Khách hàng" id="QWs-YT-5UH" colorLabel="IBBuiltInLabel-Purple"/>
                     <connections>
                         <outlet property="tableView" destination="J2X-7l-nNR" id="7I2-oQ-Rcy"/>
@@ -256,7 +257,7 @@
             </objects>
             <point key="canvasLocation" x="3218" y="-870"/>
         </scene>
-        <!--Screen Tabar Custom Search0201 View Controller-->
+        <!--Search-->
         <scene sceneID="Wuo-Qw-uHy">
             <objects>
                 <viewController storyboardIdentifier="MH_timkiem_02_01" id="fEJ-xv-NcE" customClass="Screen_Tabar_Custom_Search_02_01_ViewController" customModule="QuanTro" customModuleProvider="target" sceneMemberID="viewController">
@@ -306,6 +307,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BYZ-Ut-jiI"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Search" image="friend" id="bMa-mK-9Za">
+                        <color key="badgeColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" id="4Bk-Fj-i8n">
                         <barButtonItem key="rightBarButtonItem" systemItem="pause" id="Qjk-Cv-PDV"/>
                     </navigationItem>
@@ -456,20 +460,163 @@
             </objects>
             <point key="canvasLocation" x="5444" y="-870"/>
         </scene>
-        <!--Screen Tabar Custom Search0201DS Of01 Detail Chat View Controller-->
+        <!--View Controller-->
         <scene sceneID="PPI-w9-J01">
             <objects>
-                <viewController storyboardIdentifier="MH_Chat_User1_User2" id="hiR-2l-v0O" customClass="Screen_Tabar_Custom_Search_02_01_DSOf01_Detail__Chat_ViewController" customModule="QuanTro" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="hiR-2l-v0O" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="k9s-gB-w8l">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.25101171" green="1" blue="0.15905100089999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="cAd-4H-FIP"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aez-Dk-mau" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6194" y="-870"/>
+            <point key="canvasLocation" x="7145" y="-350"/>
+        </scene>
+        <!--Chat-->
+        <scene sceneID="Iui-jG-sPH">
+            <objects>
+                <viewController storyboardIdentifier="MH_Chat_User1_User2" id="h2x-xs-TW7" customClass="Screen_Tabar_Custom_Search_02_01_DSOf01_Detail__Chat_ViewController" customModule="QuanTro" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZzM-nU-ngS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Kqy-e5-lgP">
+                                <rect key="frame" x="0.0" y="-14.5" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CELL11" rowHeight="121" id="w9x-Y6-eGn" customClass="CELL1_Tabar_Custom_Search_02_01_DSOf01_Detail__Chat_TableViewCell" customModule="QuanTro" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="121"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="w9x-Y6-eGn" id="I7C-nr-NUv">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="120.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Zpg-UU-cDo">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="120.5"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" translatesAutoresizingMaskIntoConstraints="NO" id="oIf-8j-ka2">
+                                                            <rect key="frame" x="0.0" y="0.0" width="100" height="120.5"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="LCA-rU-k17"/>
+                                                    </constraints>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="1Am-Ts-0J3">
+                                                    <rect key="frame" x="110" y="11" width="250" height="99"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tin nhan " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="azG-lt-abc">
+                                                            <rect key="frame" x="184" y="0.0" width="66" height="99"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="Zpg-UU-cDo" secondAttribute="bottom" id="9Ud-jH-wmj"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="1Am-Ts-0J3" secondAttribute="trailing" id="Yrn-Vr-NKe"/>
+                                                <constraint firstItem="1Am-Ts-0J3" firstAttribute="leading" secondItem="Zpg-UU-cDo" secondAttribute="trailing" constant="10" id="ZR3-Oc-vOq"/>
+                                                <constraint firstItem="Zpg-UU-cDo" firstAttribute="leading" secondItem="I7C-nr-NUv" secondAttribute="leading" id="h4B-DK-g3W"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="1Am-Ts-0J3" secondAttribute="bottom" id="nVS-GB-XV9"/>
+                                                <constraint firstItem="1Am-Ts-0J3" firstAttribute="top" secondItem="I7C-nr-NUv" secondAttribute="topMargin" id="nfC-Lb-G4X"/>
+                                                <constraint firstItem="Zpg-UU-cDo" firstAttribute="top" secondItem="I7C-nr-NUv" secondAttribute="top" id="rfm-H9-cUX"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="0.96360830870000003" blue="0.70360830919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="avatar_1_User" destination="oIf-8j-ka2" id="8vz-Jm-54s"/>
+                                            <outlet property="lb_1" destination="azG-lt-abc" id="zgq-LW-dYI"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CELL12" rowHeight="156" id="zcF-jB-4Uf" customClass="CELL2_Tabar_Custom_Search_02_01_DSOf01_Detail__Chat_TableViewCell" customModule="QuanTro" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="149" width="375" height="156"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zcF-jB-4Uf" id="D6I-vM-siO">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="155.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="DW8-xM-vO0">
+                                                    <rect key="frame" x="260" y="11" width="100" height="134"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" translatesAutoresizingMaskIntoConstraints="NO" id="Efe-cU-fXM">
+                                                            <rect key="frame" x="0.0" y="0.0" width="100" height="134"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="SpV-de-n9s"/>
+                                                    </constraints>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="PMd-BF-Sfm">
+                                                    <rect key="frame" x="15" y="11" width="235" height="134"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tin nhan " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bNk-LK-w5W">
+                                                            <rect key="frame" x="0.0" y="0.0" width="235" height="134"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="PMd-BF-Sfm" firstAttribute="top" secondItem="D6I-vM-siO" secondAttribute="topMargin" id="2l0-R6-3vg"/>
+                                                <constraint firstItem="PMd-BF-Sfm" firstAttribute="leading" secondItem="D6I-vM-siO" secondAttribute="leadingMargin" id="CgC-u6-qgx"/>
+                                                <constraint firstItem="DW8-xM-vO0" firstAttribute="leading" secondItem="PMd-BF-Sfm" secondAttribute="trailing" constant="10" id="ht5-Zh-sZn"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="DW8-xM-vO0" secondAttribute="bottom" id="hxp-Kr-ceO"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="PMd-BF-Sfm" secondAttribute="bottom" id="pNy-Uy-UtL"/>
+                                                <constraint firstItem="DW8-xM-vO0" firstAttribute="trailing" secondItem="D6I-vM-siO" secondAttribute="trailingMargin" id="r42-nR-Iir"/>
+                                                <constraint firstItem="DW8-xM-vO0" firstAttribute="top" secondItem="D6I-vM-siO" secondAttribute="topMargin" id="rVX-fB-uYx"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.5612857235593014" green="0.74166756750416041" blue="0.75408679249999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="avatar_2_user" destination="Efe-cU-fXM" id="gCb-oN-gUc"/>
+                                            <outlet property="lb_2" destination="bNk-LK-w5W" id="egd-He-aWE"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                        <constraints>
+                            <constraint firstItem="Kqy-e5-lgP" firstAttribute="height" secondItem="ZzM-nU-ngS" secondAttribute="height" id="ZOV-qy-p64"/>
+                            <constraint firstItem="Kqy-e5-lgP" firstAttribute="width" secondItem="ZzM-nU-ngS" secondAttribute="width" id="gON-aN-dmH"/>
+                            <constraint firstItem="Kqy-e5-lgP" firstAttribute="centerY" secondItem="FPQ-5M-NUJ" secondAttribute="centerY" id="hQF-oP-Bqd"/>
+                            <constraint firstItem="Kqy-e5-lgP" firstAttribute="centerX" secondItem="FPQ-5M-NUJ" secondAttribute="centerX" id="kh6-RP-fm7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FPQ-5M-NUJ"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Chat" image="chat" id="6u8-iy-zKm"/>
+                    <connections>
+                        <outlet property="tableView" destination="Kqy-e5-lgP" id="Dgv-eD-gj3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9ua-sI-GYP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7047.1999999999998" y="-1186.0569715142431"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="DuO-hB-lv7">
+            <objects>
+                <tabBarController storyboardIdentifier="MH_Chat_tabar" id="3no-B1-31Z" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6aS-rN-jtd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="h2x-xs-TW7" kind="relationship" relationship="viewControllers" id="dgi-ts-spq"/>
+                        <segue destination="hrc-ql-RB6" kind="relationship" relationship="viewControllers" id="MMX-6k-0d0"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="35p-ym-SRy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6214" y="-870"/>
         </scene>
         <!--Item-->
         <scene sceneID="qQA-3j-hQV">
@@ -3127,8 +3274,10 @@
     </scenes>
     <resources>
         <image name="background3" width="1920" height="1200"/>
+        <image name="chat" width="100" height="100"/>
         <image name="checked" width="120" height="120"/>
         <image name="contract" width="96" height="96"/>
+        <image name="friend" width="100" height="100"/>
         <image name="information" width="120" height="120"/>
         <image name="listpeople" width="32" height="32"/>
         <image name="listroom" width="120" height="120"/>

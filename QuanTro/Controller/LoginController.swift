@@ -105,6 +105,14 @@ class LoginController: UIViewController{
                     var tablename = ref.child("User").child("\(u)")
                     // Listen for new comments in the Firebase database
                     tablename.observe(.childAdded, with: { (snapshot) in
+//                        guard let value = snapshot.value else { return }
+                        //                        lazy var user:[User2]?
+//                        do {
+//                            user = try FirebaseDecoder().decode(User2.self, from: value)
+//                            print(user[0].Quanlythongtincanhan.Emails)
+//                        } catch let error {
+//                            print(error)
+//                        }
                         // nếu lấy được dữ liệu postDict từ sever về và id của user có trong postDict
                         if let postDict = snapshot.value as? [String : AnyObject], currenUser.id == snapshot.key
                         {

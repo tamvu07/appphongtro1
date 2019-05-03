@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1815DC5022671A3B001904A2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1815DC4F22671A3B001904A2 /* User.swift */; };
+		185614792279252500AE396D /* CELL1_Tabar_Custom_Search_02_01_DSOf01_Detail__Chat_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185614782279252500AE396D /* CELL1_Tabar_Custom_Search_02_01_DSOf01_Detail__Chat_TableViewCell.swift */; };
+		1856147B2279256800AE396D /* CELL2_Tabar_Custom_Search_02_01_DSOf01_Detail__Chat_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1856147A2279256800AE396D /* CELL2_Tabar_Custom_Search_02_01_DSOf01_Detail__Chat_TableViewCell.swift */; };
 		18619680226DBF23004E8A73 /* Screen_Tabar_Custom_Search_01_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1861967F226DBF23004E8A73 /* Screen_Tabar_Custom_Search_01_ViewController.swift */; };
 		18619685226DC34D004E8A73 /* CELL1_Table_Tabar_Custom_Search_01_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18619684226DC34D004E8A73 /* CELL1_Table_Tabar_Custom_Search_01_TableViewCell.swift */; };
 		18619687226DD22F004E8A73 /* CELL2_Table_Tabar_Custom_Search_01_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18619686226DD22F004E8A73 /* CELL2_Table_Tabar_Custom_Search_01_TableViewCell.swift */; };
@@ -76,6 +78,8 @@
 		16553E82AB14EF080A4C9810 /* Pods_QuanTro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuanTro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1815DC4F22671A3B001904A2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		1815DC5922673568001904A2 /* QuanTro-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QuanTro-Bridging-Header.h"; sourceTree = "<group>"; };
+		185614782279252500AE396D /* CELL1_Tabar_Custom_Search_02_01_DSOf01_Detail__Chat_TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CELL1_Tabar_Custom_Search_02_01_DSOf01_Detail__Chat_TableViewCell.swift; sourceTree = "<group>"; };
+		1856147A2279256800AE396D /* CELL2_Tabar_Custom_Search_02_01_DSOf01_Detail__Chat_TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CELL2_Tabar_Custom_Search_02_01_DSOf01_Detail__Chat_TableViewCell.swift; sourceTree = "<group>"; };
 		1861967F226DBF23004E8A73 /* Screen_Tabar_Custom_Search_01_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen_Tabar_Custom_Search_01_ViewController.swift; sourceTree = "<group>"; };
 		18619684226DC34D004E8A73 /* CELL1_Table_Tabar_Custom_Search_01_TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CELL1_Table_Tabar_Custom_Search_01_TableViewCell.swift; sourceTree = "<group>"; };
 		18619686226DD22F004E8A73 /* CELL2_Table_Tabar_Custom_Search_01_TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CELL2_Table_Tabar_Custom_Search_01_TableViewCell.swift; sourceTree = "<group>"; };
@@ -191,6 +195,8 @@
 				18619684226DC34D004E8A73 /* CELL1_Table_Tabar_Custom_Search_01_TableViewCell.swift */,
 				18619686226DD22F004E8A73 /* CELL2_Table_Tabar_Custom_Search_01_TableViewCell.swift */,
 				18FA184322785B34009D02B9 /* CELL_Tabar_Custom_Search_02_01_DSOf01_TableViewCell.swift */,
+				185614782279252500AE396D /* CELL1_Tabar_Custom_Search_02_01_DSOf01_Detail__Chat_TableViewCell.swift */,
+				1856147A2279256800AE396D /* CELL2_Tabar_Custom_Search_02_01_DSOf01_Detail__Chat_TableViewCell.swift */,
 			);
 			path = tabar;
 			sourceTree = "<group>";
@@ -506,6 +512,8 @@
 				EAE0C63F21D5148B0085E5FD /* RoomerCellForSearching.swift in Sources */,
 				18619689226DDD2C004E8A73 /* Constant.swift in Sources */,
 				18F6B86C2269697B00523FBA /* Screen_Tabar_Customer_Seach_1_ViewController.swift in Sources */,
+				1856147B2279256800AE396D /* CELL2_Tabar_Custom_Search_02_01_DSOf01_Detail__Chat_TableViewCell.swift in Sources */,
+				185614792279252500AE396D /* CELL1_Tabar_Custom_Search_02_01_DSOf01_Detail__Chat_TableViewCell.swift in Sources */,
 				EAE6DF4321A9A043000749CD /* Modle.swift in Sources */,
 				EA1ABD3E21C4F65F00199442 /* WriteIndexCell.swift in Sources */,
 				18EBBE3C226A258B005969EB /* DS_phongcosan.swift in Sources */,

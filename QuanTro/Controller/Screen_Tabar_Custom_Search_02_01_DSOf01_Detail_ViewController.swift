@@ -18,18 +18,17 @@ class Screen_Tabar_Custom_Search_02_01_DSOf01_Detail_ViewController: UIViewContr
     }
     
     @IBAction func bt_Chat(_ sender: Any) {
-        self.goto_MH_Chat_User1_User2()
+        self.goto_MH_Chat_tabar()
     }
     
     
     override func viewWillAppear(_ animated: Bool) {
-        print(".........user2 chon la hien tai de chuan bi chat la :\(vistor).............")
     }
     
-    func goto_MH_Chat_User1_User2() {
-        let scr = self.storyboard?.instantiateViewController(withIdentifier: "MH_Chat_User1_User2") as! Screen_Tabar_Custom_Search_02_01_DSOf01_Detail__Chat_ViewController
+    func goto_MH_Chat_tabar() {
+        let scr = self.storyboard?.instantiateViewController(withIdentifier: "MH_Chat_tabar")
         //        present(scr!, animated: true, completion: nil)
-        navigationController?.pushViewController(scr, animated: true)
+        navigationController?.pushViewController(scr!, animated: true)
     }
     
 }
