@@ -20,12 +20,6 @@ class ListMotelController: UIViewController, UITableViewDelegate, UITableViewDat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-//        let backgroundImage = UIImageView(frame: tableView.bounds)
-//        backgroundImage.image = UIImage(named: "background2")
-//        backgroundImage.alpha = 0.4
-//        backgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
-//        self.tableView.insertSubview(backgroundImage, at: 0)
         
         
         tableView.delegate = self
