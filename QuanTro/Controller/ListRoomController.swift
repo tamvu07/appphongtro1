@@ -13,12 +13,12 @@ class ListRoomController: UIViewController,UITableViewDataSource, UITableViewDel
     
     
     @IBOutlet weak var tableView: UITableView!
-    var listRoom:[Room]!
+//    var listRoom:[Room]!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupRightButton()
-        listRoom = ListOfMotel.shared.getListRoom()
+//        listRoom = ListOfMotel.shared.getListRoom()
         tableView.register(RoomCell.self,
                            forCellReuseIdentifier: "RoomCell")
         let xib = UINib(nibName: "RoomCell", bundle: nil)
@@ -28,14 +28,14 @@ class ListRoomController: UIViewController,UITableViewDataSource, UITableViewDel
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        listRoom = ListOfMotel.shared.getListRoom()
+//        listRoom = ListOfMotel.shared.getListRoom()
         tableView.reloadData()
     }
     
 
     //MARK: Datasource and Delegate of tableview
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return listRoom.count
+        return Store.shared.userMotel.quanlydaytro![Store.shared.indexDaytro].quanlyphong?.count ?? 0
     }
     
     
@@ -47,19 +47,19 @@ class ListRoomController: UIViewController,UITableViewDataSource, UITableViewDel
         cell.contentView.addSubview(cellSize)
         cell.contentView.sendSubviewToBack(cellSize)
         
-        cell.name.text = listRoom[indexPath.row].name
-        if listRoom[indexPath.row].isStaying{
-            cell.imageV.image = UIImage(named: "closed")
-            cell.numberOfRoomer.text = String(listRoom[indexPath.row].listRoomer!.count)
-        }else{
+        cell.name.text = Store.shared.userMotel.quanlydaytro![Store.shared.indexDaytro].quanlyphong?[indexPath.row].chitietphong?.tenphong
+//        if listRoom[indexPath.row].isStaying{
+//            cell.imageV.image = UIImage(named: "closed")
+//            cell.numberOfRoomer.text = String(Store.shared.userMotel.quanlydaytro![Store.shared.indexDaytro].quanlyphong?.count)
+//        }else{
             cell.imageV.image = UIImage(named: "opened")
-            cell.numberOfRoomer.text = "0"
-        }
+        cell.numberOfRoomer.text = String.init(format: "%d", ((Store.shared.userMotel.quanlydaytro![Store.shared.indexDaytro].quanlyphong?[indexPath.row].chitietphong!.songuoidangthue)!))
+//        }
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        ListOfMotel.shared.currentRoomIndex = indexPath.row
+        Store.shared.indexPhongtro = indexPath.row
         performSegue(withIdentifier: "ShowDetailRoom", sender: tableView.cellForRow(at: indexPath))
     }
     
@@ -72,7 +72,8 @@ class ListRoomController: UIViewController,UITableViewDataSource, UITableViewDel
             let actionSheet = UIAlertController(title: "Bạn muốn xoá phòng này?", message: "Nếu xoá sẽ không thể khôi phục lại dữ liệu của phòng này", preferredStyle: .actionSheet)
             actionSheet.addAction(UIAlertAction(title: "Tôi muốn xoá", style: .destructive, handler: { (action) in
                 ListOfMotel.shared.deleteRoom(withIndex: indexPath.row)
-                self.listRoom.remove(at: indexPath.row)
+//                self.listRoom.remove(at: indexPath.row)
+                Store.shared.userMotel.quanlydaytro![Store.shared.indexDaytro].quanlyphong?.remove(at: indexPath.row)
                 ListOfMotel.shared.saveDataToFirebase()
                 let alert = UIAlertController(title: "Xoá phòng thành công", message: "", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Đóng", style: .default, handler: nil))
@@ -108,8 +109,8 @@ class ListRoomController: UIViewController,UITableViewDataSource, UITableViewDel
             return
         }
 //        newVC.isCreating = false
-        let indexPath = tableView.indexPath(for: sender as! RoomCell)
-        ListOfMotel.shared.currentRoomIndex = indexPath?.row
+//        let indexPath = tableView.indexPath(for: sender as! RoomCell)
+//        ListOfMotel.shared.currentRoomIndex = indexPath?.row
 //        newVC.currentRoom = ListOfMotel.shared.listMotel[ListOfMotel.shared.currentMotelIndex].listRoom![(indexPath?.row)!]
     }
 }

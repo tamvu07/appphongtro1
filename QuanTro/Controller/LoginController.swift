@@ -96,7 +96,7 @@ class LoginController: UIViewController{
                 {
 //                                    print("....... dang nhap thanh cong ............")
                     let user = Auth.auth().currentUser
-                    let avatar: String = user?.photoURL! as? String ?? ""
+                    let avatar: String = user?.photoURL?.absoluteString ?? ""
                     currenUser = User.init(id: user!.uid, email: (user!.email!), linkAvatar: avatar, quyen: 0)
                     
                     var u = "User1"
@@ -141,29 +141,33 @@ class LoginController: UIViewController{
                             // ref.child de truy van table trong database , lay ra ID current USER hien tai
                             tablename = ref.child("User").child("\(u)")
                             // Listen for new comments in the Firebase database
-                            tablename.observe(.childAdded, with: { (snapshot) in
-                                // nếu lấy được dữ liệu postDict từ sever về và id của user có trong postDict
-                                if let postDict = snapshot.value as? [String : AnyObject], currenUser.id == snapshot.key
-                                {
-                                    let User_current = (postDict["Quanlythongtincanhan"]) as! NSMutableDictionary
-                                    let email:String = (User_current["Email"])! as? String ?? "taolao@gmail.com"
-                                    let quyen:String = (User_current["Quyen"])! as? String ?? "taolao"
-                                    let linkAvatar:String = (User_current["LinkAvatar"])! as? String ?? "taolao"
-                                    
-                                    let user:User = User(id: snapshot.key, email: email, linkAvatar: linkAvatar, quyen: Int(quyen)!)
-                                    currenUser = user
-                                    
-                                    if(Int(currenUser.quyen) == 2)
-                                    {
-                                        print("---------------- Chuyen man hinh cho user voi quyen la 2 ---------------")
-                                        self?.set_data_QLphong()
-                                    }
-                                    else {
-                                        
-                                    }
+                            Helper.shared.fetchData(tableName: tablename, currentUserId: currenUser.id, completion: { (newUser,error) in
+                                /*
+                                 lấy thông tin chi tiết phòng:
+                                 newUser.quanlydaytro![0].quanlyphong![0].chitietphong?.diachi
+                                 newUser.quanlydaytro![0].quanlyphong![0].chitietphong?.gia
+                                 ....
+                                 lấy id các phòng (trong một dãy trọ):
+                                 newUser.quanlydaytro![0].quanlyphong![0].iDphong
+                                 newUser.quanlydaytro![0].quanlyphong![1].iDphong
+                                 newUser.quanlydaytro![0].quanlyphong![..].iDphong
+                                 lấy id các dãy trọ:
+                                 newUser.quanlydaytro![0].iDdaytro
+                                 newUser.quanlydaytro![1].iDdaytro
+                                 newUser.quanlydaytro![..].iDdaytro
+                                 lấy quản lý thông tin cá nhân của user:
+                                 newUser.quanlythongtincanhan?.email
+                                 newUser.quanlythongtincanhan?.ten
+                                 ....
+                                 lấy id của user:
+                                 newUser.userID
+                                 */
+                                if error == "" {
+                                    Store.shared.userMotel = newUser
+                                    self?.performSegue(withIdentifier: "FromLoginToListMotel", sender: self)
                                 }
                                 else {
-                                    print("KHONG CO POSTDICT HOAC ID USER KHONG CO TRONG TABLE USER2")
+                                    print(error)
                                 }
                             })
                         }

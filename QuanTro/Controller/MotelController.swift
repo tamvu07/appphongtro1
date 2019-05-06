@@ -30,23 +30,24 @@ class MotelController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.title = ListOfMotel.shared.listMotel[ListOfMotel.shared.currentMotelIndex].name
+        let number: Int = Store.shared.indexDaytro + 1
+        self.title = "Day tro so \(number)"
     }
     
     
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        switch segue.identifier {
-        case "FromMotelToCreateMotel":
-            let CreateMotelVC = segue.destination as? CreateMotelController
-            CreateMotelVC?.isCreating = false
-            
-//        case "FromMotelToListRoom":
-//            let ListRoomVC = segue.destination as? ListRoomController
-        default:
-            break
-        }
-       
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        switch segue.identifier {
+//        case "FromMotelToCreateMotel":
+//            let CreateMotelVC = segue.destination as? CreateMotelController
+//            CreateMotelVC?.isCreating = false
+//            
+////        case "FromMotelToListRoom":
+////            let ListRoomVC = segue.destination as? ListRoomController
+//        default:
+//            break
+//        }
+//
+//    }
 
 }

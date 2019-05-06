@@ -102,16 +102,36 @@ class ListOfMotel {
     }
     
     func saveDataToFirebase(){
-        
         let uid = Auth.auth().currentUser?.uid
-        do{
-            let data = try FirebaseEncoder().encode(listMotel)
-            print(data)
-            Database.database().reference().child("user/\(uid!)/listOfMotels").setValue(data)
-        }catch{
-            print(error)
+        let motel = Store.shared.userMotel!.quanlydaytro
+        for item in motel! {
+            let idDaytro: String = item.iDdaytro!
+            if item.quanlyphong!.count > 0 {
+                for item2 in item.quanlyphong! {
+                    let idPhong: String = item2.iDphong!
+                    let data: [String:Any] = [
+                        "Diachi": item2.chitietphong!.diachi!,
+                        "Dientich": item2.chitietphong!.dientich!,
+                        "Gia": item2.chitietphong!.gia!,
+                        "Motaphong": item2.chitietphong!.motaphong!,
+                        "Songuoidangthue": item2.chitietphong!.songuoidangthue!,
+                        "Songuoitoida": item2.chitietphong!.songuoitoida!,
+                        "Tenphong": item2.chitietphong?.tenphong!
+                    ]
+                    Database.database().reference().child("User/User2/\(uid!)/Quanlydaytro/\(idDaytro)/Quanlyphong/\(idPhong)/Chitietphong").setValue(data)
+                }
+            }
+            else {
+                Database.database().reference().child("User/User2/\(uid!)/Quanlydaytro/\(idDaytro)/Quanlyphong/IdDefault/Chitietphong").setValue([
+                    "Diachi": "Default",
+                    "Dientich": "Default",
+                    "Gia": "Default",
+                    "Motaphong": "Default",
+                    "Songuoidangthue": "Default",
+                    "Songuoitoida": "Default"
+                    ])
+            }
         }
-       
     }
     
     func updateServicePrices(servicePrices:ServicePrices){
@@ -240,7 +260,7 @@ class ListOfMotel {
     }
     
     func deleteMotel(withIndex index:Int){
-        listMotel.remove(at: index)
+        Store.shared.userMotel.quanlydaytro?.remove(at: index)
     }
     
     func deleteVehicle(withIndex index:Int){

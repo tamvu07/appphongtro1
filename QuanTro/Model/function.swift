@@ -38,7 +38,6 @@ class chucnang
             let quyen = quyenUser
             currenUser = User(id: uid, email: email!, linkAvatar: String("\(photoURL!)") , quyen: quyen!)
             var u = ""
-            let ql = "Quanlythongtincanhan"
             if(currenUser.quyen == 1)
             {
                 u = "User1"
@@ -46,7 +45,7 @@ class chucnang
             {
                 u = "User2"
             }
-            let tableUser = ref.child("User").child("\(u)").child(currenUser.id).child("\(ql)")
+            let tableUser = ref.child("User").child("\(u)").child(currenUser.id).child("Quanlythongtincanhan")
             
             let tt:Dictionary<String,String> = [
                 "Email": currenUser.email,

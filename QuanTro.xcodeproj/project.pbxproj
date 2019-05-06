@@ -29,6 +29,13 @@
 		18FA18422278378F009D02B9 /* Screen_Tabar_Custom_Search_02_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA18412278378F009D02B9 /* Screen_Tabar_Custom_Search_02_ViewController.swift */; };
 		18FA184422785B34009D02B9 /* CELL_Tabar_Custom_Search_02_01_DSOf01_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA184322785B34009D02B9 /* CELL_Tabar_Custom_Search_02_01_DSOf01_TableViewCell.swift */; };
 		18FA184622786436009D02B9 /* Screen_Tabar_Custom_Search_02_01_DSOf01_Detail__Chat_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA184522786435009D02B9 /* Screen_Tabar_Custom_Search_02_01_DSOf01_Detail__Chat_ViewController.swift */; };
+		20EC50CF227DE1F100C17212 /* Quanlythongtincanhan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EC50CA227DE1F000C17212 /* Quanlythongtincanhan.swift */; };
+		20EC50D0227DE1F100C17212 /* Quanlyphong.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EC50CB227DE1F100C17212 /* Quanlyphong.swift */; };
+		20EC50D1227DE1F100C17212 /* Chitietphong.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EC50CC227DE1F100C17212 /* Chitietphong.swift */; };
+		20EC50D2227DE1F100C17212 /* NewUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EC50CD227DE1F100C17212 /* NewUser.swift */; };
+		20EC50D3227DE1F100C17212 /* Quanlydaytro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EC50CE227DE1F100C17212 /* Quanlydaytro.swift */; };
+		20EC50D6227DE27200C17212 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EC50D5227DE27200C17212 /* Helper.swift */; };
+		20EC50D8227DE28100C17212 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EC50D7227DE28100C17212 /* Store.swift */; };
 		4C7182BA04185023F2DBCF73 /* Pods_QuanTro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16553E82AB14EF080A4C9810 /* Pods_QuanTro.framework */; };
 		EA00CA5721D9AC76000124F8 /* RoomerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA00CA5621D9AC76000124F8 /* RoomerCell.xib */; };
 		EA00CA5921D9AE17000124F8 /* RoomerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA00CA5821D9AE17000124F8 /* RoomerCell.swift */; };
@@ -71,7 +78,6 @@
 		EAE6DF4021A9A009000749CD /* ListMotelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE6DF3F21A9A009000749CD /* ListMotelController.swift */; };
 		EAE6DF4321A9A043000749CD /* Modle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE6DF4221A9A043000749CD /* Modle.swift */; };
 		EAE6DF4621AABE63000749CD /* MotelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE6DF4521AABE63000749CD /* MotelCell.swift */; };
-		EAE6DF4821AAD4A7000749CD /* CreateMotelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE6DF4721AAD4A7000749CD /* CreateMotelController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -99,6 +105,13 @@
 		18FA18412278378F009D02B9 /* Screen_Tabar_Custom_Search_02_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen_Tabar_Custom_Search_02_ViewController.swift; sourceTree = "<group>"; };
 		18FA184322785B34009D02B9 /* CELL_Tabar_Custom_Search_02_01_DSOf01_TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CELL_Tabar_Custom_Search_02_01_DSOf01_TableViewCell.swift; sourceTree = "<group>"; };
 		18FA184522786435009D02B9 /* Screen_Tabar_Custom_Search_02_01_DSOf01_Detail__Chat_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen_Tabar_Custom_Search_02_01_DSOf01_Detail__Chat_ViewController.swift; sourceTree = "<group>"; };
+		20EC50CA227DE1F000C17212 /* Quanlythongtincanhan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quanlythongtincanhan.swift; sourceTree = "<group>"; };
+		20EC50CB227DE1F100C17212 /* Quanlyphong.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quanlyphong.swift; sourceTree = "<group>"; };
+		20EC50CC227DE1F100C17212 /* Chitietphong.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chitietphong.swift; sourceTree = "<group>"; };
+		20EC50CD227DE1F100C17212 /* NewUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewUser.swift; sourceTree = "<group>"; };
+		20EC50CE227DE1F100C17212 /* Quanlydaytro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quanlydaytro.swift; sourceTree = "<group>"; };
+		20EC50D5227DE27200C17212 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		20EC50D7227DE28100C17212 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		84EDA828664F4C54EE97C79B /* Pods-QuanTro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuanTro.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuanTro/Pods-QuanTro.release.xcconfig"; sourceTree = "<group>"; };
 		DC97624E77661D836E7EBB97 /* Pods-QuanTro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuanTro.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuanTro/Pods-QuanTro.debug.xcconfig"; sourceTree = "<group>"; };
 		EA00CA5621D9AC76000124F8 /* RoomerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoomerCell.xib; sourceTree = "<group>"; };
@@ -145,7 +158,6 @@
 		EAE6DF3F21A9A009000749CD /* ListMotelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMotelController.swift; sourceTree = "<group>"; };
 		EAE6DF4221A9A043000749CD /* Modle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modle.swift; sourceTree = "<group>"; };
 		EAE6DF4521AABE63000749CD /* MotelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotelCell.swift; sourceTree = "<group>"; };
-		EAE6DF4721AAD4A7000749CD /* CreateMotelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMotelController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +183,7 @@
 		1815DC4E22671A09001904A2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				20EC50BB227DE17900C17212 /* BaseModel */,
 				1815DC4F22671A3B001904A2 /* User.swift */,
 				1882776D2268CA19002E1813 /* BaseView.swift */,
 				18EBBE3B226A258B005969EB /* DS_phongcosan.swift */,
@@ -207,6 +220,27 @@
 				1861968B226DF062004E8A73 /* CELL_CELL1_Table_Custom_Search_01_CollectionViewCell.swift */,
 			);
 			path = collection;
+			sourceTree = "<group>";
+		};
+		20EC50BB227DE17900C17212 /* BaseModel */ = {
+			isa = PBXGroup;
+			children = (
+				20EC50CC227DE1F100C17212 /* Chitietphong.swift */,
+				20EC50CD227DE1F100C17212 /* NewUser.swift */,
+				20EC50CE227DE1F100C17212 /* Quanlydaytro.swift */,
+				20EC50CB227DE1F100C17212 /* Quanlyphong.swift */,
+				20EC50CA227DE1F000C17212 /* Quanlythongtincanhan.swift */,
+			);
+			path = BaseModel;
+			sourceTree = "<group>";
+		};
+		20EC50D4227DE26000C17212 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				20EC50D5227DE27200C17212 /* Helper.swift */,
+				20EC50D7227DE28100C17212 /* Store.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		3F6CDF85E04411B26F43CC74 /* Pods */ = {
@@ -276,6 +310,7 @@
 		EAE6DF2521A8F614000749CD /* QuanTro */ = {
 			isa = PBXGroup;
 			children = (
+				20EC50D4227DE26000C17212 /* Helper */,
 				1815DC5122672B06001904A2 /* support */,
 				1815DC4E22671A09001904A2 /* Model */,
 				EAE0C63521D4ED420085E5FD /* CellController */,
@@ -310,7 +345,6 @@
 				EAE6DF3D21A92682000749CD /* RegisterController.swift */,
 				EAE6DF3F21A9A009000749CD /* ListMotelController.swift */,
 				EAE6DF2821A8F614000749CD /* LoginController.swift */,
-				EAE6DF4721AAD4A7000749CD /* CreateMotelController.swift */,
 				EAD5632C21AFF9A100ACC2DE /* MotelController.swift */,
 				EAA8927721B1590A005761BB /* ListRoomController.swift */,
 				EAA444ED21B2338B008AE807 /* CreateRoomController.swift */,
@@ -489,6 +523,8 @@
 			files = (
 				18619687226DD22F004E8A73 /* CELL2_Table_Tabar_Custom_Search_01_TableViewCell.swift in Sources */,
 				EAA444EE21B2338B008AE807 /* CreateRoomController.swift in Sources */,
+				20EC50D1227DE1F100C17212 /* Chitietphong.swift in Sources */,
+				20EC50D8227DE28100C17212 /* Store.swift in Sources */,
 				EA00CA5F21DB6C0E000124F8 /* ContractController.swift in Sources */,
 				18FA184622786436009D02B9 /* Screen_Tabar_Custom_Search_02_01_DSOf01_Detail__Chat_ViewController.swift in Sources */,
 				18FA183A227835D2009D02B9 /* function.swift in Sources */,
@@ -522,25 +558,29 @@
 				EA00CA5D21DA5BB6000124F8 /* CreateRoomerController.swift in Sources */,
 				EA00CA5B21D9AEC5000124F8 /* ListRoomerController.swift in Sources */,
 				EAAB960421BA4D21005F30ED /* CollectingRentalController.swift in Sources */,
+				20EC50CF227DE1F100C17212 /* Quanlythongtincanhan.swift in Sources */,
 				18D31CCE226829E700482F00 /* Screen_Main_Customer_ViewController.swift in Sources */,
 				18EBBE3E226A269A005969EB /* chuphong.swift in Sources */,
 				EA00CA6321DBAAE8000124F8 /* ListVehicleController.swift in Sources */,
 				18619680226DBF23004E8A73 /* Screen_Tabar_Custom_Search_01_ViewController.swift in Sources */,
 				1815DC5022671A3B001904A2 /* User.swift in Sources */,
 				EAE6DF2F21A8F614000749CD /* QuanTro.xcdatamodeld in Sources */,
+				20EC50D0227DE1F100C17212 /* Quanlyphong.swift in Sources */,
 				EA34CE9521C25AA900D79F26 /* WriteIndexController.swift in Sources */,
+				20EC50D3227DE1F100C17212 /* Quanlydaytro.swift in Sources */,
 				1882776C2268C814002E1813 /* CELL_Main_Customer_TableViewCell.swift in Sources */,
+				20EC50D6227DE27200C17212 /* Helper.swift in Sources */,
 				EAA8927821B1590A005761BB /* ListRoomController.swift in Sources */,
 				EAE0C63421D46D230085E5FD /* CollectingFeeController.swift in Sources */,
 				18FA183C227836AE009D02B9 /* Screen_Tabar_Custom_Search_02_01_DSOf01_Detail_ViewController.swift in Sources */,
 				EA1ABD4321C6410400199442 /* PopupController.swift in Sources */,
 				18FA184022783753009D02B9 /* Screen_Tabar_Custom_Search_02_01_ViewController.swift in Sources */,
+				20EC50D2227DE1F100C17212 /* NewUser.swift in Sources */,
 				18FA184422785B34009D02B9 /* CELL_Tabar_Custom_Search_02_01_DSOf01_TableViewCell.swift in Sources */,
 				EAE6DF2721A8F614000749CD /* AppDelegate.swift in Sources */,
 				EAD5632921AC4CC400ACC2DE /* ListOfMotel.swift in Sources */,
 				EAA4450421B4ECBD008AE807 /* ListRoomAvailableController.swift in Sources */,
 				18FA18422278378F009D02B9 /* Screen_Tabar_Custom_Search_02_ViewController.swift in Sources */,
-				EAE6DF4821AAD4A7000749CD /* CreateMotelController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -698,7 +738,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "QuanTro/support/QuanTro-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -718,7 +758,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "QuanTro/support/QuanTro-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
